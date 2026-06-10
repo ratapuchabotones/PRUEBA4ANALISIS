@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DISMAC - Sistema de Ventas e Inventario</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-dismac fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                DISMAC
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto align-items-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">
+                            Productos
+                        </a>
+                    </li>
+
+                    <!-- DISEÑO DEL SISTEMA -->
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="menuDiseno" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+
+                            Diseño del Sistema
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="contexto.html">
+                                    <i class="bi bi-diagram-3 me-2"></i>
+                                    Diagrama de Contexto
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="clases.html">
+                                    <i class="bi bi-boxes me-2"></i>
+                                    Diagrama de Clases
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="entidad-relacion.html">
+                                    <i class="bi bi-database me-2"></i>
+                                    Diagrama ER
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="procesos.html">
+                                    <i class="bi bi-gear-wide-connected me-2"></i>
+                                    Diagrama de Procesos
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="dcu.html ">
+                                    <i class="bi bi-people me-2"></i>
+                                    Casos de Uso
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="dcun.html">
+                                    <i class="bi bi-arrow-left-right me-2"></i>
+                                    Caso de Uso de Negocio
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="informe.html">
+                            Marco Teorico
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html">
+                            Videos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">
+                            Contacto
+                        </a>
+                    </li>
+
+                    <!-- LOGIN -->
+
+                    <li class="nav-item ms-3" id="menuLogin">
+
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">
+
+                            <i class="bi bi-person-circle login-icon-navbar"></i>
+
+                        </a>
+
+                    </li>
+
+                    <!-- EMPLEADO -->
+
+                    <li class="nav-item dropdown d-none ms-3" id="menuEmpleado">
+
+                        <a class="nav-link dropdown-toggle empleado-navbar" href="#" data-bs-toggle="dropdown">
+
+                            <i class="bi bi-person-circle"></i>
+
+                            <span id="nombreEmpleado"></span>
+
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end">
+
+                            <li>
+
+                                <a class="dropdown-item" href="panel.html">
+
+                                    <i class="bi bi-speedometer2"></i>
+
+                                    Panel Administrativo
+
+                                </a>
+
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+
+                                <a class="dropdown-item text-danger" href="#" onclick="logout()">
+
+                                    <i class="bi bi-box-arrow-right"></i>
+
+                                    Cerrar Sesión
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+    <!-- HERO -->
+
+    <section id="inicio" class="hero">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6">
+
+                    <h1 class="display-4 fw-bold">
+
+                        Tecnología para tu hogar
+
+                    </h1>
+
+                    <p class="lead">
+
+                        Sistema de ventas e inventario para DISMAC.
+                        Electrodomésticos, computadoras, celulares,
+                        accesorios y mucho más.
+
+                    </p>
+
+                    <div class="mt-4">
+
+                        <a href="#productos" class="btn btn-light btn-lg me-3">
+
+                            Ver Productos
+
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center">
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/1041/1041888.png" class="hero-img img-fluid">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="doc-section">
+
+        <div class="container">
+
+            <div class="doc-header">
+
+                <span class="doc-badge">
+                    PROYECTO ACADÉMICO
+                </span>
+
+                <h2 class="doc-title">
+                    Sistema Integrado de Gestión Comercial e Inventario
+                </h2>
+
+                <p class="doc-subtitle">
+                    Diseño y análisis del sistema para DISMAC utilizando
+                    Análisis Estructurado y Orientado a Objetos.
+                </p>
+
+            </div>
+
+            <div class="row mb-5">
+
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <i class="bi bi-diagram-3"></i>
+                        <div class="stat-number">6</div>
+                        Diagramas
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <i class="bi bi-boxes"></i>
+                        <div class="stat-number">14</div>
+                        Clases UML
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <i class="bi bi-database"></i>
+                        <div class="stat-number">10+</div>
+                        Entidades
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <i class="bi bi-people"></i>
+                        <div class="stat-number">3</div>
+                        Actores
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-3">
+
+                    <div class="doc-menu sticky-top" style="top:90px;">
+                        <div class="list-group">
+
+                            <!-- I. MARCO TEORICO -->
+
+                            <a class="list-group-item active" data-bs-toggle="list" href="#intro">
+                                <i class="bi bi-book"></i>
+                                Introducción
+                            </a>
+
+                            <a class="list-group-item" data-bs-toggle="list" href="#antecedentes">
+                                <i class="bi bi-clock-history"></i>
+                                Antecedentes
+                            </a>
+
+                            <a class="list-group-item" data-bs-toggle="list" href="#problema">
+                                <i class="bi bi-exclamation-triangle"></i>
+                                Planteamiento del Problema
+                            </a>
+
+                            <a class="list-group-item" data-bs-toggle="list" href="#formulacion">
+                                <i class="bi bi-question-circle"></i>
+                                Formulación del Problema
+                            </a>
+
+                            <a class="list-group-item" data-bs-toggle="list" href="#proposito">
+                                <i class="bi bi-bullseye"></i>
+                                Propósito del Estudio
+                            </a>
+
+                            <a class="list-group-item" data-bs-toggle="list" href="#metodologia">
+                                <i class="bi bi-journal-text"></i>
+                                Método e Instrumentos
+                            </a>
+
+                            <a class="list-group-item" data-bs-toggle="list" href="#justificacion">
+                                <i class="bi bi-lightbulb"></i>
+                                Justificación
+                            </a>
+
+                            <a class="list-group-item" data-bs-toggle="list" href="#alcances">
+                                <i class="bi bi-arrows-angle-expand"></i>
+                                Alcances y Limitaciones
+                            </a>
+
+                            <!-- II. ANALISIS ESTRUCTURADO -->
+
+                            <a class="list-group-item" data-bs-toggle="list" href="#estructurado">
+                                <i class="bi bi-diagram-3"></i>
+                                Diagrama de Contexto
+                            </a>
+
+                            <a class="list-group-item" data-bs-toggle="list" href="#procesos">
+                                <i class="bi bi-bezier"></i>
+                                Diagrama de Procesos
+                            </a>
+
+                            <a class="list-group-item" data-bs-toggle="list" href="#er">
+                                <i class="bi bi-database"></i>
+                                Modelo Entidad Relación
+                            </a>
+
+                            <!-- III. OO -->
+
+                            <a class="list-group-item" data-bs-toggle="list" href="#uml">
+                                <i class="bi bi-boxes"></i>
+                                Diagrama de Clases UML
+                            </a>
+
+                            <a class="list-group-item" data-bs-toggle="list" href="#casouso">
+                                <i class="bi bi-people"></i>
+                                Casos de Uso del Sistema
+                            </a>
+
+                            <a class="list-group-item" data-bs-toggle="list" href="#casonegocio">
+                                <i class="bi bi-building"></i>
+                                Casos de Uso de Negocio
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-9">
+
+                    <div class="tab-content">
+
+                        <!-- INTRODUCCION -->
+
+                        <div class="tab-pane fade show active" id="intro">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Introducción</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <p>
+                                        La investigación propone aplicar paradigmas de análisis estructurado y orientado
+                                        a objetos en el diseño de un sistema para DISMAC, empresa dedicada a la venta de
+                                        productos electrónicos y electrodomésticos. Actualmente, la gestión de
+                                        inventario y ventas presenta limitaciones por procesos manuales, lo que afecta
+                                        la eficiencia y la atención al cliente. El proyecto busca optimizar el control
+                                        de productos, ventas y clientes mediante modelos ambientales, entidad-relación,
+                                        diagramas UML y casos de uso, estableciendo una base sólida para su futura
+                                        implementación.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ANTECEDENTES -->
+
+                        <div class="tab-pane fade" id="antecedentes">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Antecedentes</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <p>
+                                        El crecimiento del mercado tecnológico ha incrementado la demanda de productos
+                                        electrónicos, generando la necesidad de sistemas de gestión más eficientes.
+                                        Muchas empresas aún dependen de registros manuales, lo que provoca pérdida de
+                                        inventario, demoras en atención, errores en facturación y dificultades en la
+                                        fidelización de clientes. Aunque existen soluciones comerciales, estas no
+                                        siempre se adaptan a las necesidades específicas de empresas como DISMAC, lo que
+                                        justifica el diseño de una solución propia basada en metodologías formales.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- PROBLEMA -->
+
+                        <div class="tab-pane fade" id="problema">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Planteamiento del Problema</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <div class="info-box">
+                                        <h5>Problema Principal</h5>
+                                        <p>
+                                            DISMAC enfrenta deficiencias en el control de inventario, atención al
+                                            cliente, registro de ventas y facturación, debido a la falta de un sistema
+                                            centralizado y automatizado. Estas limitaciones generan inconsistencias en
+                                            datos, retrasos en procesos y baja productividad del personal. La ausencia
+                                            de información estructurada sobre clientes y ventas dificulta la toma de
+                                            decisiones estratégicas. Por ello, se plantea la necesidad de un sistema
+                                            integrado que optimice procesos internos y mejore la competitividad de la
+                                            empresa.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="formulacion">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Formulación del Problema</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <div class="info-box">
+
+                                        <h5>¿Cómo mejorar la gestión de ventas e inventario en
+                                            DISMAC mediante un sistema integrado?</h5>
+
+                                        <p>
+                                            La presión del mercado tecnológico exige eficiencia en la gestión de ventas
+                                            e inventarios. DISMAC, al depender de registros manuales, enfrenta
+                                            inconsistencias en inventario, demoras en atención y errores en facturación.
+                                            Surge la necesidad de diseñar un sistema formal que integre procesos y
+                                            estructura estática mediante análisis estructurado y orientado a objetos.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="proposito">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Propósito del Estudio</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <div class="row g-4">
+
+                                        <div class="col-md-12">
+
+                                            <div class="goal-card">
+
+                                                <div class="goal-icon">
+                                                    <i class="bi bi-bullseye"></i>
+                                                </div>
+
+                                                <h5>Objetivo General</h5>
+
+                                                <p>
+                                                    Diseñar un sistema de gestión para ventas e inventarios en la tienda
+                                                    DISMAC que permita mejorar la administración de productos y
+                                                    clientes, aplicando modelos formales de análisis estructurado y
+                                                    orientado a objetos, con el fin de optimizar la eficiencia operativa
+                                                    y responder oportunamente a las necesidades del mercado.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <div class="goal-card">
+
+                                                <h5>Objetivo Específico 1</h5>
+
+                                                <p>Reducir las demoras en la atención al cliente mediante la
+                                                    automatización de un catálogo virtual que muestre en tiempo real los
+                                                    productos y el stock disponible.</p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <div class="goal-card">
+
+                                                <h5>Objetivo Específico 2</h5>
+
+                                                <p>Corregir el descontrol de inventario modelando los procesos actuales
+                                                    con diagramas de flujo de datos y procesos estructurados,
+                                                    identificando entradas, salidas y puntos críticos de control.</p>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+
+                                            <div class="goal-card">
+
+                                                <h5>Objetivo Específico 3</h5>
+
+                                                <p>Disminuir errores en el registro de ventas representando la
+                                                    estructura estática del sistema con un diagrama de clases UML y un
+                                                    modelo entidad-relación (MER) que asegure consistencia en los
+                                                    registros.
+
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+
+                                            <div class="goal-card">
+
+                                                <h5>Objetivo Específico 4</h5>
+
+                                                <p>Mejorar el seguimiento y fidelización de clientes generando un modelo
+                                                    ambiental y diagramas de casos de uso que muestren la interacción de
+                                                    entidades externas (clientes, proveedores, administradores,
+                                                    vendedores) con el sistema.</p>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+
+                                            <div class="goal-card">
+
+                                                <h5>Objetivo Específico 5</h5>
+
+                                                <p>Optimizar subprocesos clave como la venta al contado, la consulta de
+                                                    disponibilidad y el registro de ingreso de productos,
+                                                    representándolos en diagramas de procesos y casos de uso de negocio.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <div class="goal-card">
+
+                                                <h5>Objetivo Específico 6</h5>
+
+                                                <p>Establecer una base para la futura implementación de una base de
+                                                    datos relacional mediante la elaboración de un modelo
+                                                    entidad-relación que defina atributos, claves y relaciones entre
+                                                    entidades.</p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="metodologia">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Método, Medios e Instrumentos</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <div class="info-box">
+                                        <h5>Método de Investigación</h5>
+                                        <p> Cualitativo: observación directa de procesos y entrevistas no estructuradas
+                                            con vendedores y administradores para identificar percepciones sobre
+                                            demoras, errores y dificultades en inventario.</p>
+                                        <p>
+                                            Cuantitativo: análisis de datos de ventas, rotación de inventario y tiempos
+                                            promedio de atención al cliente, permitiendo medir el impacto de las
+                                            deficiencias actuales y proyectar mejoras.</p>
+                                    </div>
+
+                                    <div class="info-box">
+                                        <h5>Medios Utilizados</h5>
+                                        <p>Software de modelado: Lucidchart, Draw.io y StarUML para diagramas UML, DFD,
+                                            MER, procesos y casos de uso.
+                                        </p>
+                                        <p>
+                                            Equipo de cómputo: computadora con acceso a internet para investigación,
+                                            colaboración y construcción de modelos gráficos.
+                                        </p>
+                                        <p>
+                                            Bibliografía especializada: textos sobre UML (Booch, Rumbaugh, Jacobson) y
+                                            análisis estructurado (Yourdon, DeMarco), además de literatura sobre gestión
+                                            de sistemas de información.</p>
+                                    </div>
+
+                                    <div class="info-box">
+                                        <h5>Instrumentos</h5>
+                                        <p>Entrevistas no estructuradas: aplicadas a vendedores y administradores,
+                                            instrumento vital para captar información cualitativa sobre problemas
+                                            cotidianos y expectativas frente a un sistema automatizado.
+                                        </p>
+                                        <p>
+                                            Listas de verificación de procesos: para registrar paso a paso cómo se
+                                            realizan actualmente las operaciones de venta, consulta de stock y emisión
+                                            de facturas.
+                                        </p>
+                                        <p>
+                                            Revisión documental: análisis de facturas, reportes de stock y notas de
+                                            pedido en formato anónimo, contrastando la información registrada con la
+                                            práctica observada.</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="justificacion">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Justificación del Estudio</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <p>
+                                        El proyecto tiene relevancia académica al aplicar metodologías formales en un
+                                        caso real, práctica al identificar deficiencias en la gestión de DISMAC y
+                                        metodológica al integrar paradigmas estructurados y orientados a objetos. La
+                                        propuesta ofrece una solución conceptual que atiende problemas reales y sirve
+                                        como guía para futuras implementaciones.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="alcances">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Alcances y Limitaciones</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <div class="row g-4">
+
+                                        <div class="col-md-6">
+
+                                            <div class="goal-card">
+
+                                                <h5>
+                                                    <i class="bi bi-check-circle-fill"></i>
+                                                    Alcances
+                                                </h5>
+
+                                                <p>
+                                                    El trabajo comprende el diseño completo del sistema de información,
+                                                    incluyendo modelos, diagramas y documentación técnica. Se abordan
+                                                    los módulos de ventas, inventario y clientes, integrando procesos
+                                                    clave como consulta de stock, facturación y registro de
+                                                    transacciones. El estudio se centra en representación conceptual y
+                                                    metodológica, sin abarcar programación ni implementación técnica.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <div class="goal-card">
+
+                                                <h5>
+                                                    <i class="bi bi-exclamation-circle-fill"></i>
+                                                    Limitaciones
+                                                </h5>
+
+                                                <p>
+                                                    El análisis se restringe a los módulos de ventas, inventario y
+                                                    clientes. No se incluyen áreas como contabilidad, compras a
+                                                    proveedores, recursos humanos u otros procesos administrativos, ya
+                                                    que exceden el alcance definido para este proyecto académico.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- UML -->
+
+                        <div class="tab-pane fade" id="uml">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Diagrama de Clases UML</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <p>
+                                        El diagrama de clases UML representa la estructura estática del Sistema
+                                        Integrado de Gestión Comercial e Inventario para DISMAC. En este modelo se
+                                        identifican las principales clases que intervienen en el funcionamiento del
+                                        sistema, así como sus atributos, métodos y relaciones. Entre las clases más
+                                        importantes se encuentran Usuario, Empleado, Cliente, Producto, Categoría,
+                                        Inventario, Carrito, Pedido, Venta, Pago, Compra y Proveedor, las cuales
+                                        permiten modelar los procesos comerciales y administrativos de la empresa.
+
+                                        Las relaciones establecidas entre estas clases reflejan la interacción existente
+                                        entre los diferentes componentes del sistema, permitiendo gestionar de manera
+                                        eficiente el control de productos, el inventario, las ventas, las compras y la
+                                        atención a los clientes. Este diagrama proporciona una visión clara de la
+                                        organización interna del sistema y constituye la base para su futura
+                                        implementación utilizando el paradigma orientado a objetos.
+                                        .
+                                    </p>
+
+                                    <div class="diagram-card">
+
+                                        <div class="diagram-header">
+                                            Diagrama UML del Sistema
+                                        </div>
+
+                                        <div class="diagram-body text-center">
+
+                                            <img src="/img/diagrama de clases.png" alt="Diagrama de Clases UML"
+                                                class="img-fluid rounded shadow">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tab-pane fade" id="procesos">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Diagrama de Procesos</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <p>
+                                        Diagrama de Procesos
+
+                                        El diagrama de procesos desarrollado para el sistema de gestión comercial e
+                                        inventario de DISMAC representa de manera gráfica y secuencial las actividades
+                                        involucradas en el proceso de venta de productos electrónicos y
+                                        electrodomésticos. El modelo permite identificar la interacción entre los
+                                        diferentes participantes del proceso, así como el flujo de información y las
+                                        decisiones necesarias para completar una venta de manera satisfactoria.
+
+                                        El proceso inicia con la selección de productos por parte del cliente y continúa
+                                        con la verificación de disponibilidad en inventario, el cálculo del monto de la
+                                        compra, la gestión y validación del pago, la emisión de la factura
+                                        correspondiente y la actualización del stock. Asimismo, se incorporan mecanismos
+                                        de control para detectar niveles mínimos de inventario, permitiendo la ejecución
+                                        de un subproceso de reabastecimiento cuando sea necesario.
+
+                                        Con el propósito de mejorar la comprensión y organización del modelo, se
+                                        utilizaron subprocesos para representar actividades complejas, como la gestión
+                                        de pagos y el reabastecimiento de productos. De esta manera, el diagrama
+                                        proporciona una visión integral del funcionamiento operativo del sistema,
+                                        facilitando el análisis, la documentación y la identificación de oportunidades
+                                        de mejora en los procesos comerciales de la empresa.
+                                    </p>
+
+                                    <div class="diagram-card">
+
+                                        <div class="diagram-header">
+                                            Diagrama de Procesos
+                                        </div>
+
+                                        <div class="diagram-body">
+
+                                            <img src="/img/diagrama procesos.jpeg" class="img-fluid rounded">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tab-pane fade" id="casouso">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Diagrama de Casos de Uso</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <p>
+                                        El diagrama de casos de uso del sistema DISMAC representa las principales
+                                        interacciones entre los actores y el sistema de gestión de ventas e inventario.
+                                        A través de este modelo se identifican las funcionalidades que permiten
+                                        administrar usuarios, clientes, empleados, proveedores, categorías, productos,
+                                        inventario, compras y ventas. Los actores interactúan con el sistema para
+                                        registrar, consultar, actualizar y controlar la información necesaria para el
+                                        funcionamiento de la empresa, garantizando una gestión eficiente de los
+                                        recursos, el control de existencias y el seguimiento de las operaciones
+                                        comerciales.
+                                    </p>
+
+                                    <div class="diagram-card">
+
+                                        <div class="diagram-header">
+                                            Diagrama de Casos de Uso
+                                        </div>
+
+                                        <div class="diagram-body">
+
+                                            <img src="/img/cuo.jpeg" class="img-fluid rounded">
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="casonegocio">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Casos de Uso de Negocio</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <p>
+                                        El Modelo de Casos de Uso de Negocio desarrollado para el sistema de DISMAC está
+                                        diseñado bajo el enfoque de procesos de la metodología RUP, estructurándose de
+                                        manera horizontal para representar el ciclo de vida operativo de la organización
+                                        y delimitar claramente sus fronteras. El flujo inicia en el extremo izquierdo
+                                        impulsado por el Cliente como actor de negocio externo, quien interactúa con el
+                                        Empleado —que funge como trabajador de negocio— para activar los procesos de
+                                        preventa y venta mediante la solicitud de cotizaciones, el registro de sus datos
+                                        y la realización de la compra efectiva del producto. Este núcleo comercial
+                                        desencadena de forma secuencial y dependiente, a través de relaciones de
+                                        inclusión, la selección de ítems en catálogo, el procesamiento del pago bajo
+                                        múltiples modalidades y la emisión de la factura digital correspondiente.
+                                        Posteriormente, el flujo se desplaza hacia la gestión de logística interna
+                                        controlada por el Encargado de Almacén, quien asume las tareas de verificación
+                                        física de disponibilidad, actualización inmediata del inventario de la tienda,
+                                        control de mermas para mitigar pérdidas en exhibición y la gestión de
+                                        devoluciones post-venta. Finalmente, en el extremo derecho del modelo se integra
+                                        la cadena de abastecimiento global en conexión directa con el Proveedor,
+                                        automatizando el reabastecimiento de la empresa mediante la evaluación de
+                                        proveedores, la generación de órdenes de compra, la recepción física de
+                                        mercadería y la actualización del Stock Central. Todo este ecosistema operativo
+                                        está vinculado estratégicamente en su base hacia un Punto de Sincronización y
+                                        Consolidación denotado por un asterisco, el cual modela las auditorías internas
+                                        obligatorias de la empresa como el cierre de caja diario y el cuadre consolidado
+                                        de inventarios, asegurando que cada proceso aporte de manera medible al
+                                        cumplimiento del objetivo de negocio establecido para optimizar el stock y
+                                        maximizar la eficiencia transaccional de DISMAC.
+                                    </p>
+
+                                    <div class="diagram-card">
+
+                                        <div class="diagram-header">
+                                            Figura 6. Casos de Uso de Negocio
+                                        </div>
+
+                                        <div class="diagram-body">
+
+                                            <img src="/img/dcun.png" class="img-fluid rounded">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="er">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Diagrama Entidad-Relación</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <p>
+                                        Descripción del Diagrama Entidad-Relación...
+                                    </p>
+
+                                    <div class="diagram-card">
+
+                                        <div class="diagram-header">
+                                            Diagrama Entidad-Relación
+                                        </div>
+
+                                        <div class="diagram-body text-center">
+
+                                            <img src="/img/er.png" alt="Diagrama de Contexto"
+                                                class="img-fluid rounded shadow">
+
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- DISEÑO ESTRUCTURADO -->
+
+                        <div class="tab-pane fade" id="estructurado">
+
+                            <div class="doc-card">
+
+                                <div class="doc-card-header">
+                                    <h3>Diagrama de Contexto</h3>
+                                </div>
+
+                                <div class="doc-card-body">
+
+                                    <p>
+                                        El Diagrama de Contexto representa de forma general el Sistema de Ventas e
+                                        Inventario, mostrando las entidades externas que interactúan con él y el flujo
+                                        de información intercambiado. Las principales entidades son Cliente, Empleado y
+                                        Proveedor, quienes envían y reciben información relacionada con compras, ventas,
+                                        productos, inventario y abastecimiento. Este diagrama permite definir los
+                                        límites del sistema y comprender cómo se comunica con su entorno, sin detallar
+                                        los procesos internos que realiza.
+                                    </p>
+
+                                    <div class="diagram-card">
+
+                                        <div class="diagram-header">
+                                            Diagrama de Contexto
+                                        </div>
+
+                                        <div class="diagram-body text-center">
+
+                                            <img src="/img/diagrama de ambiental.jpeg" alt="Diagrama de Contexto"
+                                                class="img-fluid rounded shadow">
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- FOOTER -->
+    <footer id="contacto" class="footer-dismac">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <h3 class="footer-logo"><i class="bi bi-shop-window"></i> DISMAC</h3>
+                    <p class="footer-text">Especialistas en tecnología, electrodomésticos, computadoras,
+                        celulares y accesorios para el hogar.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-title"><i class="bi bi-headset"></i> Contacto</h5>
+                    <p><i class="bi bi-geo-alt-fill"></i> La Paz - Bolivia</p>
+                    <p><i class="bi bi-telephone-fill"></i> +591 77777777</p>
+                    <p><i class="bi bi-envelope-fill"></i> contacto@dismac.com</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-title"><i class="bi bi-globe"></i> Síguenos</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="text-center footer-copy">
+                <i class="bi bi-c-circle"></i> 2026 DISMAC - Sistema de Ventas e Inventario
+                <br> Universidad Mayor de San Andrés
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
